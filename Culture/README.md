@@ -16,10 +16,10 @@
     
 ## 3. 담당업무 순서도 설계 / 데이터 관계도
 1. 순서도
-<img src="C:\class\git\portfolio-1\Culture\문서\03.순서도\erd.png">  
+<img src=".\.\문서\03.순서도\erd.png">  
 
 2. 데이터관계도
-<img src="C:\class\git\portfolio-1\Culture\문서\06.데이터\4조_데이터관계도.png">
+<img src=".\.\문서\06.데이터\4조_데이터관계도.png">
   
   
   
