@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+	
+	<select id="login" parameterType="udto" resultType="String">
+	
+		select userseq from tblUser where id=#{id} and pw=#{pw}
+		
+	</select>
+	
+	<select id="list" resultType="bdto">
+		select c.contentseq, u.nick, c.subject, ct.type, c.text, c.regdate from tblContent c 
+		    inner join tblCategory ct on c.categoryseq = ct.categoryseq  
+		    inner join tblUser u on c.userseq = u.userseq order by contentseq desc
+	</select>
+	
+	<select id="category" resultType="bdto">
+		select * from tblCategory
+	</select>
+	
+	<insert id="add" parameterType="bdto">
+		insert into tblContent values(seqContent.nextval, #{userseq}, #{categoryseq}, #{subject}, sysdate, #{text})
+
+	</insert>
+	
+	<select id="addcontentseq" parameterType="String" resultType="String">
+		select max(contentseq) from tblContent where userseq = #{userseq}
+	</select>
+	
+	<select id="view" parameterType="String" resultType="bdto">
+		select c.contentseq, u.nick, c.userseq, c.subject, ct.type, c.text, c.regdate from tblContent c 
+		    inner join tblCategory ct on c.categoryseq = ct.categoryseq  
+		    inner join tblUser u on c.userseq = u.userseq
+		where contentseq = #{contentseq} 	
+	</select>
+	
+	<update id="edit" parameterType="bdto">
+		update tblContent set categoryseq = #{categoryseq}, subject=#{subject}, text=#{text} where contentseq = #{contentseq}
+	</update>
+	
+	<delete id="del" parameterType="String" >
+			delete  from tblContent where contentseq =#{contentseq}
+	</delete>
+	
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

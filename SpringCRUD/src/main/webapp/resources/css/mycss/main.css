@@ -1,0 +1,33 @@
+/* main.css */
+
+main {
+	width: 800px;
+	margin: 0 auto;
+}
+
+main > header {
+	width: 800px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+		
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+main > section {
+	
+}
+
+#info {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #CCC;
+	text-align: right;
+}
+
+#info > a {
+	margin: 5px;
+}
+
+

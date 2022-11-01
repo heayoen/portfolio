@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- 
+	<definition name="*.*" template="/WEB-INF/views/layout/board.jsp">
+		<put-attribute name="asset" value="/WEB-INF/views/inc/asset.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/inc/{2}.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/board/{1}.jsp"></put-attribute>
+	</definition>	
+	
+	 -->
+	 
+	<definition name="login" template="/WEB-INF/views/layout/login.jsp">
+	</definition>
+	
+	<definition name="del" template="/WEB-INF/views/layout/del.jsp">
+	</definition>
+	
+	<definition name="userpic" template="/WEB-INF/views/layout/userpic.jsp">
+	</definition>
+	
+	<definition name="userpicok" template="/WEB-INF/views/others/userpicok.jsp">
+	</definition>
+	
+	
+	<definition name="board.*" template="/WEB-INF/views/layout/board.jsp">
+		<put-attribute name="asset" value="/WEB-INF/views/inc/asset.jsp"></put-attribute>
+		<put-attribute name="info" value="/WEB-INF/views/inc/info.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/board/{1}.jsp"></put-attribute>
+	</definition>
+	
+	
+	
+</tiles-definitions>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

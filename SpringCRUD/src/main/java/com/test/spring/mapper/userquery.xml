@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+	
+	<select id="getuserinfo" parameterType="String" resultType="udto">
+		select id, nick, name, birth, regdate, pic from tblUSer where userseq = #{userseq}
+	</select>
+	
+	<update id="edit" parameterType="udto">
+		update tblUser set nick=#{nick}, name=#{name}, birth=#{birth}, pic=#{pic}  where userseq = #{userseq}
+	</update>
+	
+	<select id="chkid" parameterType="String" resultType="Integer">
+		select count(*) from tblUser where id = #{id}
+	</select>
+	
+	<select id="chknick" parameterType="String" resultType="Integer">
+		select count(*) from tblUser where nick = #{nick}
+	</select>
+	
+	<insert id="regist" parameterType="udto">
+		insert into tblUser values(sequser.nextVal, #{name}, #{id}, #{pw}, #{birth}, #{nick}, sysdate, null)
+	</insert>
+	
+</mapper>

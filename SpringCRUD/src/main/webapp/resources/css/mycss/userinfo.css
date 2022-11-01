@@ -1,0 +1,16 @@
+
+	.table.table-bordered.userinfo {height: 200px}
+
+	.userinfo #userpic {
+		width: 25%;
+		padding: 10px;
+	}
+	
+	.userinfo img {
+		width: 200px;
+	}
+	
+	
+	.userinfo .profile {
+		height: 80%;
+	}
